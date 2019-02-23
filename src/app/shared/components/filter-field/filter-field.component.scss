@@ -1,0 +1,46 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.options-container {
+  left: 20px;
+  width: 150px;
+  min-height: 0px;
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: blanchedalmond;
+  margin: 0px 0px 10px 0px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+label>button {
+  width: 150px;
+  height: 30px;
+  color: darkcyan;
+}
+
+input {
+  width: 150px;
+  padding: 5px;
+  border: 3px solid blanchedalmond;
+}
+
+button:hover {
+  background-color: aliceblue;
+}
+
+.field-container_fields-holder{
+  position: absolute;
+}
+
+.display-box {
+  display: flex;
+  justify-content: space-evenly;
+}

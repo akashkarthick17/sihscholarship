@@ -1,0 +1,53 @@
+<div class="container-fluid register-page-container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-sm-4 register-form-wrapper">
+      <form #registrationForm="ngForm" [formGroup]="registerForm" (ngSubmit)="register(registrationForm)" class="register-form">
+        <div class="row">
+          <div class="col">
+            <input type="email" formControlName="email" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.EMAIL.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" formControlName="username" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.USERNAME.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="password" formControlName="password" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.PASSWORD.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <input type="password" formControlName="confirmPassword" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.CONFIRM_PASSWORD.PLACE_HOLDER' | translate }}"/>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" formControlName="organizationName" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.ORGANIZATION_NAME.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" formControlName="firstName" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.FIRST_NAME.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" formControlName="lastName" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.LAST_NAME.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="tel" formControlName="phoneNumber" placeholder="{{ 'BASE.REGISTER.REGISTRATION_FORM.PHONE_NUMBER.PLACE_HOLDER' | translate }}"/>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <input type="submit" value="{{ 'BASE.REGISTER.REGISTRATION_FORM.SUBMIT_BUTTON_LABEL' | translate }}" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

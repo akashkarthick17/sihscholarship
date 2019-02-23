@@ -1,0 +1,6 @@
+<div *ngIf="totalItems!==0">
+  <button *ngIf="!isFirstPage" (click) = "goToPreviousPage()">&lt;</button>
+  <span><strong> {{currentStartItem}}-{{currentEndItem}} of {{totalItems}} </strong></span>
+  <button *ngIf="!isLastPage" (click) = "goToNextPage()">&gt;</button>
+  <div>Total Pages: {{totalPages}}</div>
+</div>

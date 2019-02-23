@@ -1,0 +1,24 @@
+.btn {
+    padding: 8px 20px 8px 20px;
+    border-radius: 1px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.btn-disabled {
+    cursor: not-allowed;
+}
+
+@mixin buttonSize($sizeLabel, $size) {
+    .btn-#{$sizeLabel} {
+        font-size: $size;
+    }
+}
+
+@include buttonSize(xs, 8px);
+@include buttonSize(sm, 10px);
+@include buttonSize(md, 12px);
+@include buttonSize(lg, 14px);
+@include buttonSize(xl, 16px);

@@ -1,0 +1,54 @@
+{
+    "BASE": {
+        "LOGIN" : {
+            "EMAIL_PLACEHOLDER": "Enter Spanish email ",
+            "PASSWORD_PLACEHOLDER": "Enter Spanish password",
+            "LOGIN_FORM": {
+                "EMAIL": {
+                    "PLACE_HOLDER": "Email"
+                },
+                "PASSWORD": {
+                    "PLACE_HOLDER": "Password"
+                }
+            }
+        }, 
+        "REGISTER" : {
+            "SUCCESSFUL_REGISTRATION": "Successfully registered", 
+            "REGISTRATION_FORM": {
+                "EMAIL": {
+                    "PLACE_HOLDER": "Email",
+                    "ERROR_MESSAGE": ""
+                },
+                "USERNAME": {
+                    "PLACE_HOLDER": "Username",
+                    "ERROR_MESSAGE": ""
+                },
+                "PASSWORD": {
+                    "PLACE_HOLDER": "Password",
+                    "ERROR_MESSAGE": ""
+                },
+                "CONFIRM_PASSWORD": {
+                    "PLACE_HOLDER": "Confirm Password",
+                    "ERROR_MESSAGE": ""
+                },
+                "ORGANIZATION_NAME": {
+                    "PLACE_HOLDER": "Organization Name",
+                    "ERROR_MESSAGE": ""
+                },
+                "FIRST_NAME": {
+                    "PLACE_HOLDER": "First Name",
+                    "ERROR_MESSAGE": ""
+                },
+                "LAST_NAME": {
+                    "PLACE_HOLDER": "Last Name",
+                    "ERROR_MESSAGE": ""
+                },
+                "PHONE_NUMBER": {
+                    "PLACE_HOLDER": "Phone Number",
+                    "ERROR_MESSAGE": ""
+                },
+                "SUBMIT_BUTTON_LABEL" : "Register"
+            }
+        }
+    }
+}

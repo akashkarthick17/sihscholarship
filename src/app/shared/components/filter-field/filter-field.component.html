@@ -1,0 +1,36 @@
+<div class="field-container">
+  <label>
+    <button (click)="showOptions=!showOptions">
+
+      <ng-content></ng-content>
+
+      <span *ngIf="!showOptions; else elseBlock"> &#9662;</span>
+      <ng-template #elseBlock>
+        <span> &#9652;</span>
+      </ng-template>
+
+    </button>
+  </label>
+
+  <div class="form-group" *ngIf=showOptions class="field-container_fields-holder">
+
+    <input type="text" placeholder="Search" [(ngModel)]="inputSearchString" (keyup)="updateSearchString(inputSearchString)">
+
+    <div class="options-container">
+      <button *ngIf=showDeselectAll (click)="deselectAll()">Deselect All</button>
+      <div *ngFor="let fieldOption of selectedOptions" class="option">
+        <span>{{ fieldOption.option_text }}</span>
+        <button (click)="removeSelectedComponentFromSelectedOptions(fieldOption)"> - </button>
+      </div>
+    </div>
+
+    <div class="options-container">
+      <button *ngIf=showSelectAll (click)="selectAll()">Select all</button>
+      <div *ngFor="let fieldOption of availableOptions" class="option">
+        <span>{{ fieldOption.option_text }}</span>
+        <button (click)="addSelectedComponentToSelectedOptions(fieldOption)"> + </button>
+      </div>
+    </div>
+
+  </div>
+</div>

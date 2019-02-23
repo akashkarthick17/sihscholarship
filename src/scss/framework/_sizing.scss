@@ -1,0 +1,77 @@
+@mixin generate ($class, $property) {
+    @for $i from 1 through 4 {
+        .#{$class}-#{$i} {
+            #{$property}: $i*10px;
+        }
+    }
+}
+
+@mixin zeroMargin ($place) {
+    .margin-#{$place}-zero {
+        margin-#{$place}: 0;
+    }
+}
+
+@mixin decreaseMargin ($place) {
+    .margin-#{$place}-less {
+        margin-#{$place}: -10px;
+    }
+}
+
+@include decreaseMargin(top);
+@include decreaseMargin(bottom);
+@include decreaseMargin(left);
+@include decreaseMargin(right);
+@include zeroMargin(top);
+@include zeroMargin(bottom);
+@include zeroMargin(left);
+@include zeroMargin(right);
+
+/*Height and Width*/
+
+@include generate(min-hgt, min-height);
+@include generate(min-wid, min-width);
+@include generate(max-hgt, max-height);
+@include generate(max-wid, max-width);
+
+/*Margin*/
+
+@include generate(m, margin);
+@include generate(m-l, margin-left);
+@include generate(m-r, margin-right);
+@include generate(m-t, margin-top);
+@include generate(m-b, margin-bottom);
+.mx-auto {
+    margin: auto;
+}
+
+
+/*Padding*/
+
+@include generate(p, padding);
+@include generate(p-l, padding-left);
+@include generate(p-r, padding-right);
+@include generate(p-t, padding-top);
+@include generate(p-b, padding-bottom);
+.px-auto {
+    padding: auto;
+}
+
+// @each $prop,
+// $abbrev in (width: w, height: h) {
+//     @each $size,
+//     $length in $sizes {
+//         .#{$abbrev}-#{$size} {
+//             #{$prop}: $length !important;
+//         }
+//     }
+// }
+
+.mw-100 {
+    max-width: 100% !important;
+}
+
+.mh-100 {
+    max-height: 100% !important;
+}
+
